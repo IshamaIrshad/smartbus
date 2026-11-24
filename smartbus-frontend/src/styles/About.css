@@ -1,0 +1,362 @@
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+  background: #f6f9fc;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.about-hero {
+  min-height: 380px;
+
+  background:
+    linear-gradient(
+      rgba(8, 48, 72, 0.78),
+      rgba(8, 48, 72, 0.78)
+    );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.about-hero-overlay {
+  max-width: 750px;
+  padding: 30px 20px;
+}
+
+.about-hero span {
+  color: #ffc107;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.about-hero h1 {
+  font-size: 44px;
+
+  font-weight: 700;
+
+  margin: 12px 0;
+}
+
+.about-hero p {
+  color: #e1edf3;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.about-intro {
+  background: white;
+
+  padding: 85px 0;
+}
+
+.about-image {
+  height: 390px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.about-label {
+  color: #0b6b9a;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.about-intro h2 {
+  color: #17324d;
+
+  font-size: 35px;
+
+  margin: 10px 0 20px;
+}
+
+.about-intro p {
+  color: #687783;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.about-button {
+  margin-top: 12px;
+
+  background: #ffc107;
+
+  color: #17212b;
+
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.about-button:hover {
+  background: #e5aa00;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.about-services {
+  padding: 80px 0;
+}
+
+.about-section-title {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 45px;
+}
+
+.about-section-title span {
+  color: #0b6b9a;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.about-section-title h2 {
+  color: #17324d;
+
+  font-size: 32px;
+
+  margin: 10px 0;
+}
+
+.about-section-title p {
+  color: #71808c;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.about-service-card {
+  height: 100%;
+
+  background: white;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  border-radius: 15px;
+
+  border: 1px solid #e5ebef;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+
+  transition: 0.25s;
+}
+
+.about-service-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.about-service-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #eaf5fa;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 29px;
+}
+
+.about-service-card h3 {
+  color: #17324d;
+
+  font-size: 19px;
+
+  margin-bottom: 10px;
+}
+
+.about-service-card p {
+  color: #71808c;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =========================
+   GOAL
+========================= */
+
+.about-goal {
+  padding: 0 0 80px;
+}
+
+.about-goal-box {
+  background: #123b56;
+
+  color: white;
+
+  padding: 45px;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.about-goal-box span {
+  color: #ffc107;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.about-goal-box h2 {
+  font-size: 29px;
+
+  margin: 8px 0 10px;
+}
+
+.about-goal-box p {
+  color: #d5e2e9;
+
+  max-width: 700px;
+
+  margin: 0;
+
+  line-height: 1.7;
+}
+
+.goal-icon {
+  width: 90px;
+  height: 90px;
+
+  flex-shrink: 0;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 45px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .about-hero {
+    min-height: 320px;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .about-hero p {
+    font-size: 14px;
+  }
+
+  .about-intro {
+    padding: 60px 0;
+  }
+
+  .about-image {
+    height: 280px;
+  }
+
+  .about-intro h2 {
+    font-size: 29px;
+  }
+
+  .about-services {
+    padding: 60px 0;
+  }
+
+  .about-goal-box {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 30px;
+  }
+
+}

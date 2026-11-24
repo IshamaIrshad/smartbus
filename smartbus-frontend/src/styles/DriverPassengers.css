@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+}
+
+.driver-passengers-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+.driver-passengers-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.driver-passengers-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.driver-passengers-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.driver-passengers-logo h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #172554;
+}
+
+.driver-passengers-logo span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.driver-passengers-navigation {
+  padding: 25px 15px;
+}
+
+.driver-passengers-navigation > p {
+  margin: 0 12px 12px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.driver-passengers-navigation button,
+.driver-passengers-sidebar-bottom button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 14px;
+  margin-bottom: 5px;
+  border-radius: 9px;
+  color: #64748b;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.driver-passengers-navigation button:hover,
+.driver-passengers-sidebar-bottom button:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.driver-passengers-navigation button.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.driver-passengers-sidebar-bottom {
+  margin-top: auto;
+  padding: 15px;
+  border-top: 1px solid #eef0f4;
+}
+
+.driver-passengers-sidebar-bottom button:last-child {
+  color: #dc2626;
+}
+
+.driver-passengers-main {
+  margin-left: 260px;
+  min-height: 100vh;
+}
+
+.driver-passengers-topbar {
+  height: 85px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+}
+
+.driver-passengers-topbar > div:first-child > span {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.driver-passengers-topbar h1 {
+  margin: 5px 0 0;
+  font-size: 25px;
+  color: #172554;
+}
+
+.driver-passengers-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.driver-passengers-user div {
+  text-align: right;
+}
+
+.driver-passengers-user strong,
+.driver-passengers-user span {
+  display: block;
+}
+
+.driver-passengers-user strong {
+  font-size: 14px;
+}
+
+.driver-passengers-user span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.driver-passengers-user i {
+  color: #2563eb;
+  font-size: 38px;
+}
+
+.driver-passengers-content {
+  padding: 30px 35px;
+}
+
+.passenger-summary {
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 24px 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.passenger-summary span {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.passenger-summary h2 {
+  margin: 7px 0 4px;
+  font-size: 23px;
+}
+
+.passenger-summary p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 13px;
+}
+
+.passenger-count {
+  text-align: right;
+}
+
+.passenger-count strong {
+  font-size: 34px;
+}
+
+.passenger-count span {
+  font-size: 14px;
+  margin-left: 3px;
+}
+
+.passenger-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.passenger-search {
+  width: 300px;
+  height: 42px;
+  background: #ffffff;
+  border: 1px solid #dbe1ea;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  gap: 8px;
+}
+
+.passenger-search i {
+  color: #94a3b8;
+}
+
+.passenger-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+}
+
+.passenger-table-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.passenger-table-header {
+  padding: 20px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.passenger-table-header h3 {
+  margin: 0;
+  color: #172554;
+  font-size: 17px;
+}
+
+.passenger-table-header span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.passenger-table-wrapper {
+  overflow-x: auto;
+}
+
+.passenger-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.passenger-table-wrapper th {
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 20px;
+}
+
+.passenger-table-wrapper td {
+  padding: 15px 20px;
+  border-top: 1px solid #eef0f4;
+  font-size: 13px;
+}
+
+.passenger-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.passenger-name > div {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.passenger-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.passenger-status.boarded {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.passenger-status.pending {
+  background: #fef3c7;
+  color: #a16207;
+}
+
+.passenger-track-btn {
+  margin-top: 20px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 12px 19px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.passenger-track-btn:hover {
+  background: #1d4ed8;
+}
+
+.passenger-track-btn i {
+  margin-right: 7px;
+}
+
+@media (max-width: 700px) {
+  .driver-passengers-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .driver-passengers-main {
+    margin-left: 0;
+  }
+
+  .driver-passengers-user {
+    display: none;
+  }
+
+  .driver-passengers-topbar {
+    padding: 0 20px;
+  }
+
+  .driver-passengers-content {
+    padding: 20px;
+  }
+
+  .passenger-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .passenger-count {
+    text-align: left;
+  }
+
+  .passenger-toolbar {
+    justify-content: stretch;
+  }
+
+  .passenger-search {
+    width: 100%;
+  }
+}

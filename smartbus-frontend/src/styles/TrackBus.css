@@ -1,0 +1,536 @@
+/* ================================
+   TRACK BUS PAGE
+================================ */
+
+.track-page {
+  min-height: 100vh;
+  background: #f4f7f9;
+  padding-bottom: 50px;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.track-header {
+  background: linear-gradient(135deg, #063b4c, #087d8f);
+  color: white;
+  padding: 45px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.track-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+.track-header h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.track-header p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.back-dashboard-btn {
+  border: none;
+  background: white;
+  color: #07566a;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.back-dashboard-btn i {
+  margin-right: 8px;
+}
+
+.back-dashboard-btn:hover {
+  background: #eef8fa;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.track-content {
+  width: 86%;
+  max-width: 1200px;
+  margin: 30px auto 0;
+}
+
+/* ================================
+   TRIP STATUS
+================================ */
+
+.trip-status-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bus-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #e8f6fa;
+  color: #087d8f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  flex-shrink: 0;
+}
+
+.status-left h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #18323b;
+}
+
+.status-left p {
+  margin: 5px 0 0;
+  color: #6c7a80;
+  font-size: 15px;
+}
+
+.status-badge {
+  background: #e9f8ef;
+  color: #18864b;
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.status-badge span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #18a558;
+}
+
+/* ================================
+   INFORMATION CARDS
+================================ */
+
+.tracking-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.tracking-info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+  min-width: 0;
+}
+
+.tracking-info-card > i {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: #edf7f9;
+  color: #087d8f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.tracking-info-card div {
+  min-width: 0;
+}
+
+.tracking-info-card span {
+  display: block;
+  font-size: 13px;
+  color: #7a878c;
+  margin-bottom: 5px;
+}
+
+.tracking-info-card strong {
+  display: block;
+  color: #20343b;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+/* ================================
+   MAP CARD
+================================ */
+
+.map-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+  margin-top: 22px;
+}
+
+.map-card-header {
+  padding: 22px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.map-card-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #18323b;
+}
+
+.map-card-header h2 i {
+  margin-right: 9px;
+  color: #087d8f;
+}
+
+.map-card-header p {
+  margin: 6px 0 0;
+  color: #7a878c;
+  font-size: 14px;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #16864b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.live-indicator span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #18a558;
+}
+
+/* ================================
+   MAP
+================================ */
+
+.map-container {
+  width: 100%;
+  height: 480px;
+}
+
+.bus-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Leaflet popup */
+
+.leaflet-popup-content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ================================
+   NOTICE
+================================ */
+
+.tracking-notice {
+  margin-top: 22px;
+  background: #eef8fa;
+  border: 1px solid #d4edf1;
+  border-radius: 15px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.tracking-notice > i {
+  color: #087d8f;
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.tracking-notice strong {
+  display: block;
+  color: #174550;
+  margin-bottom: 5px;
+}
+
+.tracking-notice p {
+  margin: 0;
+  color: #60747a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.track-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.secondary-track-btn,
+.primary-track-btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.secondary-track-btn {
+  background: white;
+  color: #07566a;
+  border: 1px solid #d8e5e8;
+}
+
+.secondary-track-btn:hover {
+  background: #f2f8f9;
+}
+
+.primary-track-btn {
+  background: #087d8f;
+  color: white;
+}
+
+.primary-track-btn:hover {
+  background: #066b7a;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+  .track-header {
+    padding: 35px 5%;
+  }
+
+  .track-header h1 {
+    font-size: 32px;
+  }
+
+  .track-content {
+    width: 90%;
+  }
+
+  .tracking-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    height: 420px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .track-page {
+    padding-bottom: 30px;
+  }
+
+  /* Header */
+
+  .track-header {
+    padding: 28px 20px;
+    display: block;
+  }
+
+  .track-label {
+    font-size: 11px;
+  }
+
+  .track-header h1 {
+    font-size: 28px;
+  }
+
+  .track-header p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .back-dashboard-btn {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* Content */
+
+  .track-content {
+    width: calc(100% - 28px);
+    margin: 18px auto 0;
+  }
+
+  /* Trip card */
+
+  .trip-status-card {
+    padding: 18px;
+    display: block;
+  }
+
+  .status-left {
+    gap: 12px;
+  }
+
+  .bus-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 23px;
+  }
+
+  .status-left h2 {
+    font-size: 19px;
+  }
+
+  .status-left p {
+    font-size: 14px;
+  }
+
+  .status-badge {
+    margin-top: 15px;
+    width: fit-content;
+  }
+
+  /* Info cards */
+
+  .tracking-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tracking-info-card {
+    padding: 16px;
+  }
+
+  .tracking-info-card > i {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Map */
+
+  .map-card {
+    border-radius: 15px;
+  }
+
+  .map-card-header {
+    padding: 18px;
+    align-items: flex-start;
+  }
+
+  .map-card-header h2 {
+    font-size: 18px;
+  }
+
+  .map-card-header p {
+    font-size: 12px;
+  }
+
+  .live-indicator {
+    font-size: 11px;
+  }
+
+  .map-container {
+    height: 330px;
+  }
+
+  /* Notice */
+
+  .tracking-notice {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .tracking-notice p {
+    font-size: 13px;
+  }
+
+  /* Buttons */
+
+  .track-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .secondary-track-btn,
+  .primary-track-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+
+  .track-header h1 {
+    font-size: 25px;
+  }
+
+  .track-content {
+    width: calc(100% - 20px);
+  }
+
+  .status-left h2 {
+    font-size: 17px;
+  }
+
+  .map-container {
+    height: 280px;
+  }
+}

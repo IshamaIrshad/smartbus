@@ -1,0 +1,678 @@
+/* =========================================
+   MANAGE BUSES PAGE
+========================================= */
+
+.manage-buses-page {
+  min-height: 100vh;
+  background: #f4f7f9;
+  color: #1d343c;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.bus-management-header {
+  background: white;
+  min-height: 110px;
+  padding: 25px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #e5edef;
+}
+
+.bus-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-admin-btn {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dce7e9;
+  background: white;
+  color: #087d8f;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.back-admin-btn:hover {
+  background: #eef8fa;
+}
+
+.bus-header-left span {
+  color: #087d8f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.bus-header-left h1 {
+  margin: 5px 0 3px;
+  font-size: 28px;
+}
+
+.bus-header-left p {
+  margin: 0;
+  color: #78888e;
+  font-size: 13px;
+}
+
+.add-bus-btn {
+  border: none;
+  background: #087d8f;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 9px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.add-bus-btn:hover {
+  background: #066b7a;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.bus-management-content {
+  width: 90%;
+  max-width: 1250px;
+  margin: 28px auto 50px;
+}
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.bus-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.bus-stat-card {
+  background: white;
+  border-radius: 15px;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.bus-stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+.bus-stat-icon.total {
+  background: #eaf5f8;
+  color: #087d8f;
+}
+
+.bus-stat-icon.active-icon {
+  background: #eaf8ef;
+  color: #20834b;
+}
+
+.bus-stat-icon.maintenance-icon {
+  background: #fff4e5;
+  color: #c67b18;
+}
+
+.bus-stat-icon.inactive-icon {
+  background: #eef1f3;
+  color: #68787e;
+}
+
+.bus-stat-card span {
+  display: block;
+  color: #7b898e;
+  font-size: 12px;
+}
+
+.bus-stat-card strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 22px;
+}
+
+/* =========================================
+   BUS LIST
+========================================= */
+
+.bus-list-section {
+  background: white;
+  border-radius: 17px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.bus-list-header {
+  padding: 22px 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #edf1f2;
+}
+
+.bus-list-header h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.bus-list-header p {
+  margin: 5px 0 0;
+  color: #7b898e;
+  font-size: 12px;
+}
+
+.bus-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.bus-search {
+  position: relative;
+}
+
+.bus-search i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8b999e;
+}
+
+.bus-search input {
+  width: 210px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #dce6e8;
+  border-radius: 8px;
+  padding: 0 12px 0 36px;
+  outline: none;
+  font-size: 12px;
+}
+
+.bus-search input:focus {
+  border-color: #087d8f;
+}
+
+.status-filter {
+  height: 40px;
+  border: 1px solid #dce6e8;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: white;
+  color: #445a61;
+  outline: none;
+  font-size: 12px;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.bus-table-wrapper {
+  overflow-x: auto;
+}
+
+.bus-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 950px;
+}
+
+.bus-table th {
+  padding: 14px 17px;
+  background: #fafcfc;
+  border-bottom: 1px solid #edf1f2;
+  text-align: left;
+  font-size: 10px;
+  color: #7a898e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bus-table td {
+  padding: 15px 17px;
+  border-bottom: 1px solid #f0f3f4;
+  font-size: 12px;
+  color: #586a70;
+}
+
+.bus-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.bus-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 170px;
+}
+
+.bus-list-icon {
+  width: 37px;
+  height: 37px;
+  border-radius: 9px;
+  background: #eaf7f9;
+  color: #087d8f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.bus-name-cell strong {
+  display: block;
+  color: #263d45;
+  font-size: 12px;
+}
+
+.bus-name-cell span {
+  display: block;
+  margin-top: 3px;
+  color: #8a989d;
+  font-size: 10px;
+}
+
+.capacity {
+  white-space: nowrap;
+}
+
+.capacity i {
+  margin-right: 5px;
+  color: #087d8f;
+}
+
+.bus-status {
+  display: inline-block;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.bus-status.active {
+  background: #e9f8ef;
+  color: #21844c;
+}
+
+.bus-status.maintenance {
+  background: #fff4e5;
+  color: #c47712;
+}
+
+.bus-status.inactive {
+  background: #eef1f3;
+  color: #68777d;
+}
+
+.bus-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.edit-bus-btn,
+.delete-bus-btn {
+  width: 31px;
+  height: 31px;
+  border-radius: 7px;
+  cursor: pointer;
+  background: white;
+  font-size: 12px;
+}
+
+.edit-bus-btn {
+  border: 1px solid #d9e8eb;
+  color: #087d8f;
+}
+
+.delete-bus-btn {
+  border: 1px solid #f0dada;
+  color: #c14b4b;
+}
+
+.edit-bus-btn:hover {
+  background: #edf8fa;
+}
+
+.delete-bus-btn:hover {
+  background: #fff2f2;
+}
+
+.no-buses {
+  text-align: center !important;
+  padding: 50px !important;
+}
+
+.no-buses i {
+  display: block;
+  font-size: 30px;
+  color: #a8b6ba;
+  margin-bottom: 10px;
+}
+
+.no-buses strong {
+  display: block;
+  color: #435960;
+}
+
+.no-buses span {
+  display: block;
+  margin-top: 5px;
+  color: #89979b;
+  font-size: 11px;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+.bus-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 39, 47, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.bus-modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 17px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.bus-modal-header {
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #edf1f2;
+}
+
+.bus-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.bus-modal-header p {
+  margin: 5px 0 0;
+  color: #7b898e;
+  font-size: 12px;
+}
+
+.close-modal-btn {
+  width: 33px;
+  height: 33px;
+  border: none;
+  background: #f2f5f6;
+  color: #64767c;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bus-form {
+  padding: 23px 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.bus-form-field {
+  margin-bottom: 17px;
+}
+
+.bus-form-field label {
+  display: block;
+  margin-bottom: 6px;
+  color: #354b52;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.bus-form-field label span {
+  color: #d64d4d;
+}
+
+.bus-form-field input,
+.bus-form-field select {
+  width: 100%;
+  height: 43px;
+  box-sizing: border-box;
+  border: 1px solid #dce6e8;
+  border-radius: 8px;
+  padding: 0 12px;
+  outline: none;
+  color: #344a51;
+  background: #fbfcfc;
+  font-size: 13px;
+}
+
+.bus-form-field input:focus,
+.bus-form-field select:focus {
+  border-color: #087d8f;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(8, 125, 143, 0.07);
+}
+
+.bus-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+.cancel-bus-btn,
+.save-bus-btn {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.cancel-bus-btn {
+  border: 1px solid #dce6e8;
+  background: white;
+  color: #5d7076;
+}
+
+.save-bus-btn {
+  border: none;
+  background: #087d8f;
+  color: white;
+}
+
+.save-bus-btn i {
+  margin-right: 6px;
+}
+
+.save-bus-btn:hover {
+  background: #066b7a;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .bus-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bus-list-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bus-filters {
+    width: 100%;
+  }
+
+  .bus-search {
+    flex: 1;
+  }
+
+  .bus-search input {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .bus-management-header {
+    padding: 20px 16px;
+    align-items: flex-start;
+  }
+
+  .bus-header-left {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .back-admin-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .bus-header-left h1 {
+    font-size: 23px;
+  }
+
+  .bus-header-left p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .add-bus-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .bus-management-header {
+    display: block;
+  }
+
+  .bus-management-content {
+    width: calc(100% - 24px);
+    margin-top: 18px;
+  }
+
+  .bus-stat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .bus-stat-card {
+    padding: 14px;
+    gap: 9px;
+  }
+
+  .bus-stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .bus-stat-card strong {
+    font-size: 19px;
+  }
+
+  .bus-list-header {
+    padding: 18px;
+  }
+
+  .bus-filters {
+    display: block;
+  }
+
+  .bus-search {
+    margin-bottom: 9px;
+  }
+
+  .bus-search input,
+  .status-filter {
+    width: 100%;
+  }
+
+  .status-filter {
+    height: 40px;
+  }
+
+  .bus-modal {
+    max-height: 94vh;
+  }
+
+  .bus-modal-header,
+  .bus-form {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .bus-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-bus-btn,
+  .save-bus-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .bus-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bus-header-left h1 {
+    font-size: 21px;
+  }
+}

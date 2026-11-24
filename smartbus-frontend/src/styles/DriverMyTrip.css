@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+}
+
+.driver-trip-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+.driver-trip-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.driver-trip-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.driver-trip-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.driver-trip-logo h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #172554;
+}
+
+.driver-trip-logo span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.driver-trip-navigation {
+  padding: 25px 15px;
+}
+
+.driver-trip-navigation > p {
+  margin: 0 12px 12px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.driver-trip-navigation button,
+.driver-trip-sidebar-bottom button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 14px;
+  margin-bottom: 5px;
+  border-radius: 9px;
+  color: #64748b;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.driver-trip-navigation button:hover,
+.driver-trip-sidebar-bottom button:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.driver-trip-navigation button.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.driver-trip-sidebar-bottom {
+  margin-top: auto;
+  padding: 15px;
+  border-top: 1px solid #eef0f4;
+}
+
+.driver-trip-sidebar-bottom button:last-child {
+  color: #dc2626;
+}
+
+.driver-trip-main {
+  margin-left: 260px;
+  min-height: 100vh;
+}
+
+.driver-trip-topbar {
+  height: 85px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+
+.driver-trip-topbar > div:first-child > span {
+  font-size: 11px;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.driver-trip-topbar h1 {
+  margin: 5px 0 0;
+  color: #172554;
+  font-size: 25px;
+}
+
+.driver-trip-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.driver-trip-user div {
+  text-align: right;
+}
+
+.driver-trip-user strong,
+.driver-trip-user span {
+  display: block;
+}
+
+.driver-trip-user strong {
+  font-size: 14px;
+}
+
+.driver-trip-user span {
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.driver-trip-user i {
+  color: #2563eb;
+  font-size: 38px;
+}
+
+.driver-trip-content {
+  padding: 30px 35px;
+}
+
+.trip-header-card {
+  background: #2563eb;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.trip-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.trip-header-card h2 {
+  margin: 7px 0 4px;
+  font-size: 24px;
+}
+
+.trip-header-card p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+.trip-live-status {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.trip-live-status i {
+  font-size: 7px;
+  margin-right: 6px;
+}
+
+.trip-details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+  margin-bottom: 20px;
+}
+
+.trip-detail-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.trip-detail-card > i {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.trip-detail-card span,
+.trip-detail-card strong {
+  display: block;
+}
+
+.trip-detail-card span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.trip-detail-card strong {
+  margin-top: 5px;
+  color: #172554;
+  font-size: 15px;
+}
+
+.trip-route-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.trip-route-card h3 {
+  margin: 0 0 25px;
+  color: #172554;
+}
+
+.route-line {
+  display: flex;
+  align-items: center;
+}
+
+.route-point {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.route-point > span {
+  width: 14px;
+  height: 14px;
+  background: #2563eb;
+  border: 3px solid #dbeafe;
+  border-radius: 50%;
+}
+
+.route-point strong,
+.route-point small {
+  display: block;
+}
+
+.route-point strong {
+  font-size: 13px;
+}
+
+.route-point small {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.route-connector {
+  flex: 1;
+  height: 2px;
+  background: #cbd5e1;
+  margin: 0 15px;
+}
+
+.trip-action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.trip-action-buttons button {
+  border: none;
+  background: #ffffff;
+  border: 1px solid #dbe1ea;
+  color: #2563eb;
+  padding: 12px 18px;
+  border-radius: 9px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.trip-action-buttons button:hover {
+  background: #eff6ff;
+}
+
+.trip-action-buttons i {
+  margin-right: 7px;
+}
+
+@media (max-width: 1000px) {
+  .trip-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .driver-trip-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .driver-trip-main {
+    margin-left: 0;
+  }
+
+  .driver-trip-user {
+    display: none;
+  }
+
+  .driver-trip-topbar {
+    padding: 0 20px;
+  }
+
+  .driver-trip-content {
+    padding: 20px;
+  }
+
+  .trip-header-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .trip-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .route-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .route-connector {
+    width: 2px;
+    height: 25px;
+    margin: 0 0 0 6px;
+  }
+
+  .trip-action-buttons {
+    flex-direction: column;
+  }
+}

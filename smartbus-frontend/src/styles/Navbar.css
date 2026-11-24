@@ -1,0 +1,246 @@
+/* SMARTBUS NAVBAR */
+
+.smart-navbar {
+  width: 100%;
+  height: 75px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 50px;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #e5e5e5;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+  position: relative;
+
+  z-index: 1000;
+}
+
+
+/* LOGO */
+
+.smart-brand {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  min-width: 220px;
+}
+
+.bus-icon {
+  width: 45px;
+  height: 45px;
+
+  background: #0b5e8e;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+
+  margin-right: 10px;
+}
+
+.smart-brand strong {
+  display: block;
+
+  color: #0b5e8e;
+
+  font-size: 22px;
+
+  line-height: 1.1;
+}
+
+.smart-brand small {
+  display: block;
+
+  color: #777;
+
+  font-size: 11px;
+
+  margin-top: 3px;
+}
+
+
+/* NAVIGATION */
+
+.smart-nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-left: auto;
+}
+
+.smart-nav-link {
+  color: #333;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  padding: 10px 15px;
+
+  border-radius: 7px;
+
+  transition: 0.2s;
+}
+
+.smart-nav-link:hover {
+  color: #0b5e8e;
+
+  background: #eef7fc;
+}
+
+
+/* LOGIN + REGISTER */
+
+.smart-nav-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-left: 20px;
+}
+
+.smart-login {
+  color: #0b5e8e;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  padding: 10px 16px;
+
+  border-radius: 7px;
+}
+
+.smart-login:hover {
+  background: #eef7fc;
+}
+
+.smart-register {
+  background: #0b5e8e;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  padding: 11px 20px;
+
+  border-radius: 7px;
+
+  transition: 0.2s;
+}
+
+.smart-register:hover {
+  background: #084b70;
+
+  color: white;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .smart-navbar {
+    padding: 0 25px;
+  }
+
+  .smart-brand {
+    min-width: 180px;
+  }
+
+  .smart-nav-link {
+    padding: 9px 10px;
+
+    font-size: 14px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .smart-navbar {
+    height: auto;
+
+    padding: 15px 20px;
+
+    flex-wrap: wrap;
+  }
+
+  .smart-nav-links {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: center;
+
+    margin-top: 10px;
+  }
+
+  .smart-nav-buttons {
+    margin-left: auto;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 450px) {
+
+  .smart-brand small {
+    display: none;
+  }
+
+  .smart-brand strong {
+    font-size: 19px;
+  }
+
+  .bus-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 21px;
+  }
+
+  .smart-nav-link {
+    font-size: 12px;
+
+    padding: 7px;
+  }
+
+  .smart-login {
+    font-size: 13px;
+
+    padding: 8px;
+  }
+
+  .smart-register {
+    font-size: 13px;
+
+    padding: 9px 12px;
+  }
+
+}
